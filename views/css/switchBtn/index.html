@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../../css/switchBtn.css">
+</head>
+<body>
+  <span class="cell-value cell-value1">
+    <input type="checkbox" class="my-switch-button" id="is_notify" onclick="handleNotify(this)">
+    <label for="is_notify"></label>
+  </span>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $('.my-switch-button').prop('checked', true)
+  function handleNotify(btn) {
+    console.log(btn);
+    console.log($(btn).is(':checked'));
+    console.log($(btn).prop('checked'));
+  }
+</script>
+</html>

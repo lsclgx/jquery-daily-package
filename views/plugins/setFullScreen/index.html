@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content" style="width: 500px;height: 500px;border: 1px solid #dcdcdc;background-color: #f5f5f5;color: #000;">
+    <button class="sfs">】【</button>
+    <p>如果用esc退出全屏，无法很好的监听并设置图标，所以样式没有键盘按键的兼容，所以最好不要根据是否全屏修改按钮</p>
+  </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../plugins/setFullScreen/setFullScreen.js?v=3"></script>
+<script>
+  $('.sfs').setFullScreen({
+    targetEl: '.content',
+    fulledFn: () => {
+      $('.sfs').html('【】')
+    },
+    exitedFn: () => {
+      // 通过esc退出全屏也应该触发一次exitedFn，但是监听不到，todo:
+      $('.sfs').html('】【')
+    }
+  })
+</script>
+</html>

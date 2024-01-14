@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+  </ul>
+</body>
+<script src="./index.js"></script>
+<script>
+  let str = ''
+  for(let i = 0; i < arr.length; i ++) {
+    const item = arr[i]
+    const type = item.type
+    const path = item.path
+    const list = item.list
+    let str1 = ''
+    list.forEach(item1 => {
+      str1 += '<li><a href="./views/'+path+item1.url+'">'+item1.title+'</a></li>'
+    })
+    str += '<p style="font-weight:bold;">'+type+'</p>'+str1
+  }
+  document.querySelector('ul').innerHTML = str
+</script>
+</html>

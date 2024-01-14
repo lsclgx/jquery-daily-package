@@ -1,0 +1,20 @@
+.my-scrollbar {
+  /* 第一个方块颜色，第二个轨道颜色(用于更改火狐浏览器样式) */
+  scrollbar-color: rgb(74, 139, 194) rgba(0,0,0,0.1);
+  /* 火狐滚动条无法自定义宽度，只能通过此属性使滚动条宽度变细 */
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+  width: 100%;
+  overflow-y: auto;
+}
+.my-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.my-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgb(74, 139, 194);
+}
+.my-scrollbar::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}

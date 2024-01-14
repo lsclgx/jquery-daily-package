@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">上传文件</button>
+  <button id="cur" onclick="cur()">当前文件列表</button>
+  <button id="add" onclick="add()">新增文件列表</button>
+  <button id="del" onclick="del()">删除文件列表</button>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../plugins/uploadFiles/uploadFiles.js"></script>
+<script>
+  // 初始化插件，以下方法都可以同时用
+  const a = $('#btn').uploadFiles({
+    uploadType: 'img', // img/file
+    accept: '', // .xls,.xlsx,.csv,.png,.jpg,.jpeg
+    multiple: true,
+    fileList: [{
+      id: 1,
+      name: 1,
+      url: 'https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF'
+    },{
+      id: 2,
+      name: 2,
+      url: 'https://t7.baidu.com/it/u=4198287529,2774471735&fm=193&f=GIF'
+    }], // {id, name, url} 文件name必填，图片name不必填
+    // upload: (file, resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve({id:1,name:'aaa',url: 'https://img2.baidu.com/it/u=1057399611,2473766499&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281'})
+    //   }, 1000);
+    // }, // 选择文件后就上传到服务器的方法
+    beforeUpload: (file) => {
+      console.log(file);
+      return true
+    }, // 校验，需返回布尔值
+    preview: (idx, list) => {
+      console.log('idx', 'list', idx, list);
+    }
+  })
+
+  // 获取最终在页面上留下的文件列表
+  // 应用场景例如：选择文件后就调用接口保存到存储服务器，然后接口返回文件地址。没有单独删除接口，提交表单时，提交所有页面上的文件id
+  function cur() {
+    const b = $('#btn').uploadFiles('getValue')
+    console.log(b)
+  }
+
+  // 获取新添加的文件列表
+  // 应用场景例如：选择文件后保存在本地，有提交按钮，点击提交按钮，再调用接口上传所有文件，列表中的file字段即文件
+  function add() {
+    const c = $('#btn').uploadFiles('getAdded')
+    console.log(c)
+  }
+
+  // 获取删除的文件列表，只返回编辑时一开始就有的文件，新增的无需用到，所以不返回
+  // 应用场景例如：有删除单个文件的接口，也有提交整个表单（包含文件）的接口，就在提交之前获取删除的文件列表，删除后(不考虑失败情况，因为这种情况设计本就不合理)再调用提交接口，或提交后再调删除都可以（无论删除接口成功失败，都应该正常提交表单）
+  function del() {
+    const d = $('#btn').uploadFiles('getRemoved')
+    console.log(d)
+  }
+
+</script>
+</html>

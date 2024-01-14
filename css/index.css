@@ -1,0 +1,208 @@
+.my-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.my-flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my-flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.my-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.my-float-left {
+  float: left;
+}
+
+.my-float-right {
+  float: right;
+}
+
+.my-clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.my-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.my-wrap {
+  word-break: break-all;
+}
+
+.my-relative {
+  position: relative;
+}
+
+.my-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 9999;
+}
+
+.my-show {
+  display: block;
+}
+
+.my-hide {
+  display: none;
+}
+
+.my-inline-block {
+  display: inline-block;
+}
+
+.my-margin10 {
+  margin: 10px;
+}
+.my-margin-t10 {
+  margin-top: 10px;
+}
+.my-margin-b10 {
+  margin-bottom: 10px;
+}
+.my-margin-l10 {
+  margin-left: 10px;
+}
+.my-margin-r10 {
+  margin-right: 10px;
+}
+.my-margin20 {
+  margin: 20px;
+}
+.my-margin-t20 {
+  margin-top: 20px;
+}
+.my-margin-b20 {
+  margin-bottom: 20px;
+}
+.my-margin-l20 {
+  margin-left: 20px;
+}
+.my-margin-r20 {
+  margin-right: 20px;
+}
+
+.my-padding10 {
+  padding: 10px;
+}
+.my-padding-t10 {
+  padding-top: 10px;
+}
+.my-padding-b10 {
+  padding-bottom: 10px;
+}
+.my-padding-l10 {
+  padding-left: 10px;
+}
+.my-padding-r10 {
+  padding-right: 10px;
+}
+.my-padding20 {
+  padding: 20px;
+}
+.my-padding-t20 {
+  padding-top: 20px;
+}
+.my-padding-b20 {
+  padding-bottom: 20px;
+}
+.my-padding-l20 {
+  padding-left: 20px;
+}
+.my-padding-r20 {
+  padding-right: 20px;
+}
+
+.my-border {
+  border: 1px solid #e2e9ee;
+}
+.my-border-b {
+  border-bottom: 1px solid #e2e9ee;
+}
+.my-border-t {
+  border-top: 1px solid #e2e9ee;
+}
+.my-border-l {
+  border-left: 1px solid #e2e9ee;
+}
+.my-border-r {
+  border-right: 1px solid #e2e9ee;
+}
+
+.my-border-radius2 {
+  border-radius: 2px;
+}
+.my-border-radius4 {
+  border-radius: 4px;
+}
+.my-border-radius6 {
+  border-radius: 6px;
+}
+.my-border-radius8 {
+  border-radius: 8px;
+}
+.my-border-radius10 {
+  border-radius: 10px;
+}
+
+.my-radius-add, .my-radius-remove {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50% !important;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgb(74, 139, 194);
+}
+html::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+
+
+
